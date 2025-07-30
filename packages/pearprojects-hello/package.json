@@ -1,0 +1,33 @@
+{
+  "name": "pearprojects-hello",
+  "main": "index.js",
+  "pear": {
+    "name": "pearprojects-hello",
+    "type": "terminal"
+  },
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "brittle test/*.test.js",
+    "dev": "bun run build && bun run start",
+    "start": "pear run -d .",
+    "build": "bun build index.ts --outdir . --packages=external"
+  },
+  "devDependencies": {
+    "brittle": "^3.0.0",
+    "pear-interface": "^1.0.0",
+    "@types/bun": "latest"
+  },
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bare-path": "^3.0.0",
+    "easybase": "github:Drache93/easybase",
+    "htm": "^3.1.1",
+    "preact": "^10.27.0",
+    "preact-render-to-string": "^6.5.13",
+    "zod": "^4.0.5"
+  }
+}
