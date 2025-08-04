@@ -22,6 +22,7 @@
     "pear-interface": "^1.0.0"
   },
   "dependencies": {
-    "b4a": "^1.6.7"
+    "b4a": "^1.6.7",
+    "pear-request": "github:Drache93/pear-request"
   }
 }

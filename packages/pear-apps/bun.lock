@@ -5,6 +5,7 @@
       "name": "pear-apps",
       "dependencies": {
         "b4a": "^1.6.7",
+        "pear-request": "github:Drache93/pear-request",
       },
       "devDependencies": {
         "brittle": "^3.0.0",
@@ -106,6 +107,8 @@
     "path": ["bare-path@3.0.0", "", { "dependencies": { "bare-os": "^3.0.1" } }, "sha512-tyfW2cQcB5NN8Saijrhqn0Zh7AnFNsnczRcuWODH0eYAXBsJ5gVxAUuNr7tsHSC6IZ77cA0SitzT+s47kot8Mw=="],
 
     "pear-interface": ["pear-interface@1.1.0", "", { "dependencies": { "bare-pipe": "^4.0.5", "streamx": "^2.18.0" } }, "sha512-hJSoyY5Sk6ox6sT128TXSSuUKPdwOiRPa47ArEw6cfLMFxDAnyG1kh5xq+qTiSiENDqgV4Sjd8EtsPITRAL09Q=="],
+
+    "pear-request": ["pear-request@github:Drache93/pear-request#fbd224e", { "dependencies": { "b4a": "^1.6.7" } }, "Drache93-pear-request-fbd224e"],
 
     "picomatch": ["picomatch@4.0.3", "", {}, "sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q=="],
 

@@ -6,6 +6,7 @@
     "module": "ESNext",
     "moduleDetection": "force",
     "jsx": "react-jsx",
+    "jsxImportSource": "preact",
     "allowJs": true,
 
     // Bundler mode for development
@@ -29,6 +30,6 @@
     // Type resolution
     "typeRoots": ["../../node_modules/@types", "../../node_modules/holepunch-types"]
   },
-  "include": ["index.ts", "global.d.ts", "example.ts"],
+  "include": ["src/**/*", "global.d.ts"],
   "exclude": ["node_modules", "build", "dist"]
 }

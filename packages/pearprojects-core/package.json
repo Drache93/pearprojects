@@ -1,6 +1,6 @@
 {
   "name": "pearprojects-core",
-  "main": "index.js",
+  "main": "dist/index.js",
   "pear": {
     "name": "pearprojects-core",
     "type": "terminal"
@@ -11,7 +11,7 @@
     "test": "brittle test/*.test.js",
     "dev": "bun run build && bun run start",
     "start": "pear run -d .",
-    "build": "bun build index.ts --outdir . --packages=external"
+    "build": "bun build src/* --outdir ./dist --packages=external"
   },
   "devDependencies": {
     "brittle": "^3.0.0",
@@ -25,6 +25,10 @@
   "dependencies": {
     "bare-path": "^3.0.0",
     "easybase": "github:Drache93/easybase",
+    "htm": "^3.1.1",
+    "pear-request": "github:Drache93/pear-request",
+    "preact": "^10.27.0",
+    "preact-render-to-string": "^6.5.13",
     "zod": "^4.0.5"
   }
 }
