@@ -6,8 +6,8 @@
     "type": "desktop",
     "gui": {
       "backgroundColor": "#1F2430",
-      "height": "540",
-      "width": "720"
+      "height": "720",
+      "width": "1280"
     }
   },
   "type": "module",
@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "b4a": "^1.6.7",
-    "pear-request": "github:Drache93/pear-request"
+    "bare-fs": "^4.1.6",
+    "bare-path": "^3.0.0",
+    "pear-request": "github:Drache93/pear-request#v0.1.1"
   }
 }

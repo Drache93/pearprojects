@@ -10,7 +10,7 @@ import { render } from "preact-render-to-string";
 import path from "bare-path";
 import b4a from "b4a";
 import { App } from "./app";
-import { Counter } from "./components/Counter";
+import { VoteButtons } from "./components/VoteButtons";
 
 const pipe = Pear.worker.pipe();
 
@@ -46,20 +46,82 @@ Pear.teardown(() => easybase.close());
 // Create router with your Pear pipe
 const router = new PearRequestRouter(pipe);
 
-const state = {
-  count: 0,
-};
+const projects = [
+  {
+    id: "1",
+    title: "Pear Projects",
+    description:
+      "A modern project management platform built with Bun and Preact",
+    logo: "🍐",
+    upvotes: 0,
+    downvotes: 0,
+  },
+  {
+    id: "2",
+    title: "HTMX Dashboard",
+    description: "Real-time dashboard using HTMX for seamless updates",
+    logo: "⚡",
+    upvotes: 0,
+    downvotes: 0,
+  },
+  {
+    id: "3",
+    title: "Bun Runtime",
+    description: "Fast JavaScript runtime and toolkit for modern development",
+    logo: "🚀",
+    upvotes: 0,
+    downvotes: 0,
+  },
+];
 
 // Register routes
 router.get("/app", (req, res) => {
-  const response = render(h(App, { name: "World", ...state }));
+  const response = render(h(App, { projects }));
   res.body = response;
 });
 
-router.put("/count", (req, res) => {
-  state.count++;
-  const response = render(h(Counter, { count: state.count }));
-  res.body = response;
+// Upvote route
+router.post("/api/projects/:id/upvote", (req, res) => {
+  // @ts-ignore
+  const projectId = req.params.id;
+  const project = projects.find((p) => p.id === projectId);
+
+  if (project) {
+    project.upvotes++;
+    const response = render(
+      h(VoteButtons, {
+        projectId,
+        upvotes: project.upvotes,
+        downvotes: project.downvotes,
+      })
+    );
+    res.body = response;
+  } else {
+    res.status = 404;
+    res.body = "Project not found";
+  }
+});
+
+// Downvote route
+router.post("/api/projects/:id/downvote", (req, res) => {
+  // @ts-ignore
+  const projectId = req.params.id;
+  const project = projects.find((p) => p.id === projectId);
+
+  if (project) {
+    project.downvotes++;
+    const response = render(
+      h(VoteButtons, {
+        projectId,
+        upvotes: project.upvotes,
+        downvotes: project.downvotes,
+      })
+    );
+    res.body = response;
+  } else {
+    res.status = 404;
+    res.body = "Project not found";
+  }
 });
 
 // Handle incoming messages

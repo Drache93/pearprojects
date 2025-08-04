@@ -7,7 +7,7 @@
         "bare-path": "^3.0.0",
         "easybase": "github:Drache93/easybase",
         "htm": "^3.1.1",
-        "pear-request": "github:Drache93/pear-request",
+        "pear-request": "link:pear-request",
         "preact": "^10.27.0",
         "preact-render-to-string": "^6.5.13",
         "zod": "^4.0.5",
@@ -225,7 +225,7 @@
 
     "pear-interface": ["pear-interface@1.1.0", "", { "dependencies": { "bare-pipe": "^4.0.5", "streamx": "^2.18.0" } }, "sha512-hJSoyY5Sk6ox6sT128TXSSuUKPdwOiRPa47ArEw6cfLMFxDAnyG1kh5xq+qTiSiENDqgV4Sjd8EtsPITRAL09Q=="],
 
-    "pear-request": ["pear-request@github:Drache93/pear-request#fbd224e", { "dependencies": { "b4a": "^1.6.7" } }, "Drache93-pear-request-fbd224e"],
+    "pear-request": ["pear-request@link:pear-request", {}],
 
     "picomatch": ["picomatch@4.0.2", "", {}, "sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg=="],
 
