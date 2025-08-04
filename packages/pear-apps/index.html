@@ -8,7 +8,10 @@
   <body>
     <div id="bar"><pear-ctrl></pear-ctrl></div>
     <main id="app" hx-trigger="load" hx-get="/app" hx-swap="innerHTML">
-      Loading...
+      <div class="app-loading">
+        <img src="./assets/logo.png" alt="Pear" height="300" />
+        <span>Loading...</span>
+      </div>
     </main>
   </body>
 </html>

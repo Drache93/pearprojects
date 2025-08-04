@@ -17,6 +17,18 @@ body > h1:nth-of-type(1) {
   cursor: pointer;
 }
 
+.app-loading {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.app-loading img {
+  margin-bottom: 16px;
+}
+
 #bar {
   background: rgba(55, 60, 72, 0.6);
   backdrop-filter: blur(64px);
