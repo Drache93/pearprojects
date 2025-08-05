@@ -3,13 +3,14 @@ body {
   --turquoise: #29d3c2;
   --deep-blue: #3b60f0;
   --dark-purple: #5d3bff;
-  --background-black: #0a0a0a;
+  --background-black: #0e0e0e;
   --title-bar-height: 42px;
 
   background-color: var(--background-black);
   color: var(--mint-green);
   padding-top: var(--title-bar-height);
   height: calc(100vh - var(--title-bar-height));
+  font-family: "Inter", sans-serif;
   margin: 0;
 }
 

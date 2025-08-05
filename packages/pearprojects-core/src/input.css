@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Project List Styles - Modern Design */
+@theme {
+  --color-mint-green: #2ee6a2;
+  --color-turquoise: #29d3c2;
+  --color-deep-blue: #3b60f0;
+  --color-dark-purple: #5d3bff;
+  --color-background-black: #0e0e0e;
+}

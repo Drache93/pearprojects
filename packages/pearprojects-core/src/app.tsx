@@ -5,19 +5,15 @@ import fs from "bare-fs";
 // @ts-ignore
 import path from "bare-path";
 
-const styles = fs.readFileSync(path.join(__dirname, "styles.css"), "utf8");
+const stylesPath = path.join(__dirname, "../dist", "output.css");
+console.log("stylesPath: ", stylesPath);
+const styles = fs.readFileSync(stylesPath, "utf8");
 
 export function App({ projects }: { projects: ProjectData[] }) {
   return (
     <>
       <style>{styles}</style>
-      <div className="container">
-        <header>
-          <h1>Project List</h1>
-          <p>Discover and vote on amazing projects</p>
-        </header>
-        <ProjectList projects={projects} />
-      </div>
+      <ProjectList projects={projects} />
     </>
   );
 }

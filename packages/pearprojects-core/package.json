@@ -11,7 +11,8 @@
     "test": "brittle test/*.test.js",
     "dev": "bun run build && bun run start",
     "start": "pear run -d .",
-    "build": "bun build src/*.{ts,tsx} src/**/*.{ts,tsx} --outdir ./dist --packages=external"
+    "build": "bun build src/*.{ts,tsx} src/**/*.{ts,tsx} --outdir ./dist --packages=external",
+    "build:tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css"
   },
   "devDependencies": {
     "brittle": "^3.0.0",
@@ -23,12 +24,14 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
     "bare-path": "^3.0.0",
     "easybase": "github:Drache93/easybase",
     "htm": "^3.1.1",
     "pear-request": "github:Drache93/pear-request#v0.2.0",
     "preact": "^10.27.0",
     "preact-render-to-string": "^6.5.13",
+    "tailwindcss": "^4.1.11",
     "zod": "^4.0.5"
   }
 }
